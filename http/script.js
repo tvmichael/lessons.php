@@ -29,12 +29,14 @@ xhr.open('GET', 'phones.json', true);
 
 xhr.send(); // (1)
 
-xhr.onreadystatechange = function() { // (3)
+xhr.onreadystatechange = function()
+{ // (3)
   if (xhr.readyState != 4) return;
 
   button.innerHTML = 'Готово!';
 
-  if (xhr.status != 200) {
+  if (xhr.status != 200)
+  {
     phone.innerHTML = xhr.status + ': ' + xhr.statusText;
   } else {
     phone.innerHTML = xhr.responseText;
